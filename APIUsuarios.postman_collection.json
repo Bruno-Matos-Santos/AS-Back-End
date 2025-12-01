@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "dc626c54-1879-47d5-83f2-a10d35f54bbd",
+		"name": "APIUsuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50485487",
+		"_collection_link": "https://zhaa1st-595181.postman.co/workspace/Zhaa's-Workspace~9db97140-1505-41f9-8419-d7f56d1bd4af/collection/50485487-dc626c54-1879-47d5-83f2-a10d35f54bbd?action=share&source=collection_link&creator=50485487"
+	},
+	"item": [
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5284/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5284",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Achar Usuario pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5284/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5284",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"João Silva\",\r\n  \"email\": \"Email\",\r\n  \"senha\": \"123456\",\r\n  \"dataNascimento\": \"1995-05-10\",\r\n  \"telefone\": \"(11) 91234-5678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5284/usuarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5284",
+					"path": [
+						"usuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"João Gomes\",\r\n  \"email\": \"joao.Gomes@email.com\",\r\n  \"dataNascimento\": \"2010-05-10\",\r\n  \"telefone\": \"(11) 91234-5678\",\r\n  \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5284/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5284",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5284/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5284",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
