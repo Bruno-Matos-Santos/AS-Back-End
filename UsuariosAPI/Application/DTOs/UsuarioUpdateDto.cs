@@ -1,5 +1,3 @@
-UsuarioUpdateDto.cs
-
 using System;
 
 namespace Application.DTOs
